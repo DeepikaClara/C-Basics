@@ -1,0 +1,18 @@
+/*print 1 to 50 and its equivalent logarithm and exponential
+ */
+
+#include <stdio.h>
+#include <math.h>
+int main()
+    {
+        printf("Number \tLogarithm \tExponential\n");
+        int num;
+        double logarithm,exponential;
+        for(num=1;num<=50;num++)
+        {
+            logarithm = log(num);
+            exponential =exp(num);
+            printf("%d \t%f \t%f \n",num,logarithm,exponential);
+        }
+    
+}

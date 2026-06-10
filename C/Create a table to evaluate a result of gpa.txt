@@ -1,0 +1,28 @@
+/*Create a table to evaluate a formula based on values of
+ * gpa in the range from gpa = 0.00 to 4.00 in units of 0.50
+ */
+#include <stdio.h>
+
+int main() {
+    
+/*declare gpa and result
+ *gpa should be from 0.00 to 4.00 increasing by 0.5
+ *result has formula [(gpa)^3 +7gps-1]/[(gpa)^2 - (gpa+5)/3]
+ *if result is greater than or equal to 0 then should print Admit
+*/
+   double gpa, result;
+   printf("Hi, Registrar, Please find the GPA values & Result..\n");
+   printf("Grade Point Average \t Result \tStatus\n");
+   for(gpa=0.00;gpa<=4.00;gpa=gpa+0.5)
+   {
+       result = ((gpa*gpa*gpa) +(7*gpa)-1)/((gpa*gpa) - ((gpa+5)/3));
+       printf("\t%f \t\t\t%f ", gpa,result);
+       if(result>=0)
+       {
+            printf("\tAdmit this student\n");   
+           
+       }
+       printf("\n"); 
+   }
+    printf("End of execution...\n");
+}
